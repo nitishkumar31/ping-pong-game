@@ -1,0 +1,106 @@
+/* Importing Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+/* Defining Variables */
+:root {
+  --rod1Primary: #000746;
+  --rod1Secondary: #004e92;
+  --rod2Primary: #aa076b;
+  --rod2Secondary: #61045f;
+  --pure: #fff;
+  --dark: #000;
+  --orange: #ffae19;
+  --darkOrange: #895900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins";
+  background-color: var(--dark);
+  overflow: hidden;
+}
+
+#container {
+  position: relative;
+}
+
+.centerLine {
+  position: absolute;
+  top: 50vh;
+  width: 100%;
+  opacity: 0.25;
+}
+
+/* Style for ball and rods */
+.ball {
+  width: 25px;
+  height: 25px;
+  background-color: var(--orange);
+  background: radial-gradient(circle, var(--orange) 10%, var(--darkOrange) 120%);
+  box-shadow: 0 0 10px var(--darkOrange);
+  position: fixed;
+  top: 20px;
+  left: 52.5%;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.rod1,
+.rod2 {
+  width: 250px;
+  height: 25px;
+  position: fixed;
+  left: 50%;
+  border-radius: 5px;
+  text-align: center;
+  color: var(--pure);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rod1 {
+  background: linear-gradient(var(--rod1Primary), var(--rod1Secondary));
+  box-shadow: 0 1px 15px var(--rod1Secondary);
+  top: 0px;
+}
+
+.rod2 {
+  background: linear-gradient(var(--rod2Primary), var(--rod2Secondary));
+  box-shadow: 0 -1px 15px var(--rod2Secondary);
+  bottom: 0px;
+}
+
+/* Style for Score board */
+.rod1Score {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 30vh;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  color: var(--rod1Secondary);
+  font-size: 5rem;
+}
+.rod2Score {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 55vh;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  color: var(--rod2Primary);
+  font-size: 5rem;
+}
